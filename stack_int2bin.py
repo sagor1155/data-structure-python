@@ -14,8 +14,10 @@ Example : 242
 from stack import Stack
 
 def convert_integer_to_binary(decimal_number):
+    if decimal_number==0:
+        return 0
+    
     stack = Stack()
-
     while decimal_number > 0:
         remainder = decimal_number % 2 
         stack.push(remainder)
